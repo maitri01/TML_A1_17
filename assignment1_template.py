@@ -12,7 +12,7 @@ from torchvision.models import resnet18
 model = resnet18(pretrained=False)
 model.fc = torch.nn.Linear(512, 44)
 
-ckpt = torch.load("./01_MIA_68.pt", map_location="cpu")
+ckpt = torch.load("./01_MIA.pt", map_location="cpu")
 
 model.load_state_dict(ckpt)
 
