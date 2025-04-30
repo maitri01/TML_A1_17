@@ -9,6 +9,10 @@ import pandas as pd
 
 from torchvision.models import resnet18
 
+### Add this as a transofrmation to pre-process the images
+mean = [0.2980, 0.2962, 0.2987]
+std = [0.2886, 0.2875, 0.2889]
+
 model = resnet18(pretrained=False)
 model.fc = torch.nn.Linear(512, 44)
 
