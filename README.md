@@ -27,8 +27,8 @@ This repository contains our solution to Assignment 1 of the **Trustworthy Machi
 - `test.csv`  
   → Final submission file with membership confidence scores for the private dataset.
 
-- `Report` 
- → A detailed **report** outlining our approach, feature engineering, design decisions, evaluation results, and alternative strategies is included in the repository as `TML_A1_17 Report.pdf`. It summarizes the full methodology and supports the code implementation for grading and review purposes.
+- `Report`      
+  → A detailed **report** outlining our approach, feature engineering, design decisions, evaluation results, and alternative strategies is included in the repository as `TML_A1_17 Report.pdf`. It summarizes the full methodology and supports the code implementation for grading and review purposes.
 
 ---
 
