@@ -27,8 +27,6 @@ This repository contains our solution to Assignment 1 of the **Trustworthy Machi
 - `test.csv`  
   → Final submission file with membership confidence scores for the private dataset.
 
-- `README.md`  
-  → This file. Summarizes the approach, how to run the code, and the results.
 
 ---
 
