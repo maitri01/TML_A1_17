@@ -13,6 +13,14 @@ This repository contains our solution to Assignment 1 of the **Trustworthy Machi
 
 ---
 
+## 👥 Team
+
+**Team 21**  
+Maitri Shah - 7075780
+Yashashri Balwaik - 7075733
+
+---
+
 ## 🧪 Files
 
 - `assignment1_solution.ipynb`  
