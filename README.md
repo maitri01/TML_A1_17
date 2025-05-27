@@ -1,5 +1,12 @@
 # TML25 Assignment 1 – Membership Inference Attack
 
+## 📌 Additional Notes
+
+Both a **Jupyter Notebook (`assignment1_solution.ipynb`)** and a **Python script (`assignment1_solution.py`)** are included in this repository.  
+They implement the same pipeline, so you can choose either based on your workflow or system constraints.
+
+---
+
 ## 📌 Overview
 
 This repository contains our solution to Assignment 1 of the **Trustworthy Machine Learning** course (SS 2025), focused on implementing a **Membership Inference Attack (MIA)** on a ResNet-18 model. Our goal was to infer the membership status of data points in a private dataset by generating continuous confidence scores using various model-based and statistical features.
@@ -15,7 +22,7 @@ This repository contains our solution to Assignment 1 of the **Trustworthy Machi
   - PCA for dimensionality reduction
   - XGBoost training and prediction
   - Submission generation and evaluation
-  - Validation experiments and visualizations
+  - Validation
 
 - `test.csv`  
   → Final submission file with membership confidence scores for the private dataset.
@@ -37,9 +44,4 @@ We extract both **engineered features** (confidence, entropy, RMIA score, etc.) 
 - **AUC**: 0.6645  
 - Internal validation AUC: ~0.709
 
----
 
-## 🧪 How to Run
-
-1. Clone the repository.
-2. Ensure you have the required packages installed:
