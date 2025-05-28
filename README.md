@@ -7,7 +7,7 @@ They implement the same pipeline, so you can choose either based on your workflo
 
 ---
 
-## 📌 Overview
+## Overview
 
 This repository contains our solution to Assignment 1 of the **Trustworthy Machine Learning** course (SS 2025), focused on implementing a **Membership Inference Attack (MIA)** on a ResNet-18 model. Our goal was to infer the membership status of data points in a private dataset by generating continuous confidence scores using various model-based and statistical features.
 
@@ -20,7 +20,7 @@ Yashashri Balwaik - 7075733
 
 ---
 
-## 🧪 Files
+## Files
 
 - `assignment1_solution.ipynb`  
   → Jupyter notebook containing the full implementation:
@@ -39,11 +39,32 @@ Yashashri Balwaik - 7075733
 
 ---
 
-## 🧠 Methodology
+## Approach
 
-We extract both **engineered features** (confidence, entropy, RMIA score, etc.) and **deep features** from the penultimate layer of ResNet-18. We also compute **cosine similarity** to member and non-member mean embeddings. PCA is applied to reduce dimensionality. These features are combined and used to train an **XGBoost** classifier on the public dataset. The classifier is then applied to the private dataset to generate membership scores.
+### Step 1: Feature Extraction
+
+We used a modified ResNet-18 to extract:
+- **Logits** and **deep features** (from the second last layer)
+- **Engineered statistics**, such as:
+  - Confidence, cross-entropy loss, entropy, margin
+  - Rank of the true class, RMIA score
+  - Logit differences, norms, top-k entropy
+- **Cosine similarity** between the sample's deep feature and average deep features of known members and non-members (from the public dataset)
+
+### Step 2: Dimensionality Reduction
+
+To reduce deep features and eliminate noise:
+- Applied **PCA (64 components)** to the 512-dimensional deep features
+- Avoided overfitting and made the features more informative
+
+### Step 3: Classification
+
+- Combined **engineered features**, **PCA-transformed deep features**, and **logits**
+- Trained an **XGBoost classifier** on publicly available data where membership is known
+- Used the trained model to predict **membership confidence scores** on the private data
 
 ---
+
 
 ## ✅ Results
 
